@@ -76,9 +76,9 @@ function displayStudents(data) {
         studentDiv.classList.add('student');
         studentDiv.innerHTML = `
             <h2>${student["Name"]}</h2>
-            <p>Reg no: ${student["Regd No."]}</p>
-            <p>Mobile no: ${student["Mobile"]}</p>
-            <p>Email id: ${student["E-mail"]}</p>
+            <p>Regd No.: ${student["Regd No."]}</p>
+            <p>Mobile: ${student["Mobile"]}</p>
+            <p>Email: ${student["E-mail"]}</p>
             <p>Father Name: ${student["Father Name"]}</p>
             <p>Mother Name: ${student["Mother Name"]}</p>
             <p>Program: ${student["Program"]}</p>
@@ -196,3 +196,26 @@ function generateCSV(data) {
     });
     return csvContent;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm');
+    const loginError = document.getElementById('loginError');
+    const mainContainer = document.getElementById('mainContainer');
+
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form submission
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Check if username and password are correct
+        if ((username === 'Karan' && password === 'karan@ceo2024') || (username === 'Anand' && password === 'anand@2024')) {
+            // Hide login container and show main container
+            document.getElementById('loginContainer').style.display = 'none';
+            mainContainer.style.display = 'block';
+        } else {
+            // Show login error message
+            loginError.style.display = 'block';
+        }
+    });
+});
