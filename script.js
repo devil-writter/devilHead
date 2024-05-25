@@ -76,9 +76,9 @@ function displayStudents(data) {
         studentDiv.classList.add('student');
         studentDiv.innerHTML = `
             <h2>${student["Name"]}</h2>
-            <p>Regd No.: ${student["Regd No."]}</p>
-            <p>Mobile: ${student["Mobile"]}</p>
-            <p>Email: ${student["E-mail"]}</p>
+            <p>Reg no: ${student["Regd No."]}</p>
+            <p>Mobile no: ${student["Mobile"]}</p>
+            <p>Email id: ${student["E-mail"]}</p>
             <p>Father Name: ${student["Father Name"]}</p>
             <p>Mother Name: ${student["Mother Name"]}</p>
             <p>Program: ${student["Program"]}</p>
