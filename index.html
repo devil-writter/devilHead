@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPU First Year Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to LPU First Year Student Details</h1>
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search by Name, Regd No., or Mobile Number">
+        <button onclick="search()">Search</button>
+    </div>
+    <div class="filters">
+        <select id="genderFilter">
+            <option value="">All Genders</option>
+        </select>
+        
+        <select id="programTypeFilter">
+            <option value="">All Program Types</option>
+        </select>
+        
+        <select id="programFilter">
+            <option value="">All Programs</option>
+        </select>
+        
+        <button onclick="applyFilters()">Apply Filters</button>
+        <button onclick="clearFilters()">Clear Filters</button>
+        <button onclick="downloadFilteredData()">Download Filtered Data (Excel)</button>
+    </div>
+    <div id="loading">Loading...</div>
+    
+    <div id="student-container">
+        <!-- Student details will be injected here by JavaScript -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

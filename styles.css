@@ -1,0 +1,128 @@
+/* Body and General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #0056b3;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Filters and Search Styling */
+.filters, .search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.filters select, .search input, .filters button, .search button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.filters select:focus, .search input:focus, .filters button:hover, .search button:hover {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.1);
+}
+
+.filters button, .search button {
+    background-color: #0056b3;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filters button:hover, .search button:hover {
+    background-color: #004494;
+}
+
+/* Loading Animation */
+#loading {
+    display: none;
+    text-align: center;
+    font-size: 1.5em;
+    color: #0056b3;
+}
+
+/* Student Container Styling */
+#student-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Student Card Styling */
+.student {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.student h2 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.student p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.student {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .student {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .student {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .student {
+        width: calc(100% - 20px);
+    }
+}
